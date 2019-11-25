@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Generador : MonoBehaviour
 {
-    public GameObject dragon, skeleton;
+    public GameObject slime, skeleton;
     [Space]
     public int enemigosOleada, numOleadas;
     public float frecEnemigos, frecOleadas;
@@ -34,7 +34,7 @@ public class Generador : MonoBehaviour
         int nE = Random.Range(0, 2);
         if (nE == 0)
         {
-            GameObject enemigo = Instantiate(dragon, transform.position, Quaternion.identity);
+            GameObject enemigo = Instantiate(slime, transform.position, Quaternion.identity);
 
         }
         else if (nE == 1)
@@ -54,7 +54,7 @@ public class Generador : MonoBehaviour
         if (numOleadaActual < numEnemy)
         {
             oleadaEnCurso = true;
-            Invoke("crearOleadas", frecuencia);
+            Invoke("LlamarOleadas", frecuencia);
         }
         else
         {
