@@ -8,10 +8,16 @@ ModelImporter:
     400000: polySurface24
     400002: //RootNode
     2100000: initialShadingGroup
+    2100002: polySurface24Mat
     2300000: polySurface24
     3300000: polySurface24
     4300000: polySurface24
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface24Mat
+    second: {fileID: 2100000, guid: eed54bf8d5630ba4a9a79caf703eebd7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

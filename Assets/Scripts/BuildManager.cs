@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour 
 {
     public static BuildManager instance;
-    public GameObject torretaBasica;
+    public GameObject torretaBasica, torretaAvanzada, torretaFuturista;
     private GameObject torretaConstruir;
     void Awake()
     {
@@ -16,13 +16,13 @@ public class BuildManager : MonoBehaviour
         }
         instance = this;
     }
-
-    void Start()
-    {
-        torretaConstruir = torretaBasica;
-    }
     public GameObject GetTorretaConstruir()
     {
         return torretaConstruir;
     }
+    public void SetTorreta (GameObject torreta)
+    {
+        torretaConstruir = torreta;
+    }
+    
 }
