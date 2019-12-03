@@ -6,6 +6,7 @@ public class Balas : MonoBehaviour
 {
     private Transform target;
     public float speed = 70f;
+
     public void Skeek(Transform targetB)
     {
         target = targetB;
@@ -27,10 +28,12 @@ public class Balas : MonoBehaviour
             GolpeTarget();
             return;
         }
+        transform.Translate(magni.normalized * disThisFrame, Space.World);
     }
 
     void GolpeTarget()
     {
         Destroy(gameObject);
+        Destroy(target.gameObject);
     }
 }
