@@ -3166,11 +3166,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836ee9604cb9d834dbc0abbe7add7647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slime: {fileID: 4819613649997629864, guid: 827ae3af22b98014288507f98db42c90, type: 3}
+  necromancer: {fileID: 4819613649997629864, guid: 827ae3af22b98014288507f98db42c90,
+    type: 3}
   skeleton: {fileID: 457320202910413450, guid: fec42e9f385ef8547935dfefa0b9206f, type: 3}
+  boo: {fileID: 6259886379443409649, guid: f64d3f9647ed7264c9659b449452e28b, type: 3}
   enemigosOleada: 5
   numOleadas: 2
-  frecEnemigos: 1
+  frecEnemigos: 2
   frecOleadas: 4
 --- !u!1001 &3550414970948504484
 PrefabInstance:

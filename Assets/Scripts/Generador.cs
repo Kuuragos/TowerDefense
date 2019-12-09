@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Generador : MonoBehaviour
 {
-    public GameObject slime, skeleton;
+    public GameObject necromancer, skeleton, boo;
     [Space]
     public int enemigosOleada, numOleadas;
     public float frecEnemigos, frecOleadas;
@@ -31,16 +31,19 @@ public class Generador : MonoBehaviour
     }
     void SpawnEnemigo()
     {
-        int nE = Random.Range(0, 2);
-        if (nE == 0)
+        int nE = Random.Range(0, 3);
+        GameObject enemigo;
+        switch (nE)
         {
-            GameObject enemigo = Instantiate(slime, transform.position, Quaternion.identity);
-
-        }
-        else if (nE == 1)
-        {
-            GameObject enemigo = Instantiate(skeleton, transform.position, Quaternion.identity);
-
+            case 0:
+                enemigo = Instantiate(necromancer, transform.position, Quaternion.identity);
+                break;
+            case 1:
+                enemigo = Instantiate(skeleton, transform.position, Quaternion.identity);
+                break;
+            case 2:
+                enemigo = Instantiate(boo, transform.position, Quaternion.identity);
+                break;
         }
     }
     void LlamarOleadas()
