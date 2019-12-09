@@ -6,7 +6,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
     public GameObject torretaBasica, torretaAvanzada, torretaFuturista;
-    private GameObject torretaConstruir;
+    private PlanoTorreta torretaConstruir; 
     void Awake()
     {
         if (instance != null)
@@ -16,11 +16,23 @@ public class BuildManager : MonoBehaviour
         }
         instance = this;
     }
-    public GameObject GetTorretaConstruir()
+    public bool CanBuild { get { return torretaConstruir != null; } }
+    public bool HasMoney { get { return MoneyCount.dinero >= torretaConstruir.costo; } }
+
+    public void EncedidoConstruir (Nodos nodo)
     {
-        return torretaConstruir;
+        if (MoneyCount.dinero < torretaConstruir.costo)
+        {
+            Debug.Log("ERES POBRE! No Puedes Construir Con Tan Poco Dinero");
+            return;
+        }
+
+        MoneyCount.dinero -= torretaConstruir.costo;
+        GameObject torre = (GameObject)Instantiate(torretaConstruir.prefab, nodo.GetBuildPosition(), Quaternion.identity);
+        nodo.torreta = torre;
+        Debug.Log("Construcción Completada! Dinero Restante: " + MoneyCount.dinero);
     }
-    public void SetTorreta (GameObject torreta)
+    public void SetTorretaConstruir(PlanoTorreta torreta)
     {
         torretaConstruir = torreta;
     }

@@ -122,5 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360b23c922f6d874f8cc0aec195e7ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  torreta: {fileID: 0}
   hoverColor: {r: 0, g: 0.8396226, b: 0.67190224, a: 0}
+  sinDineroColor: {r: 1, g: 0.15851644, b: 0, a: 0}
   posicionActual: {x: 0, y: 0, z: 0}

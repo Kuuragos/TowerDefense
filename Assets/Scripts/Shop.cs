@@ -4,25 +4,28 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
+    public PlanoTorreta torretaBasica, torretaAvanzada, torretaFuturista;
     BuildManager builder;
     void Start()
     {
         builder = BuildManager.instance;
     }
 
-    public void comprarTorretaBasica()
+    public void SelectTorretaBasica()
     {
         Debug.Log("Torreta Basica");
-        builder.SetTorreta(builder.torretaBasica);
+        builder.SetTorretaConstruir(torretaBasica);
     }
-    public void comprarTorretaAvanzada()
+    public void SelectTorretaAvanzada()
     {
         Debug.Log("Torreta Avanzada");
-        builder.SetTorreta(builder.torretaAvanzada);
+        builder.SetTorretaConstruir(torretaAvanzada);
+
     }
-    public void comprarTorretaFuturista()
+    public void SelectTorretaFuturista()
     {
         Debug.Log("Torreta Futurista");
-        builder.SetTorreta(builder.torretaFuturista);
+        builder.SetTorretaConstruir(torretaFuturista);
+
     }
 }

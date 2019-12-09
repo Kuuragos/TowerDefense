@@ -158,4 +158,4 @@ MonoBehaviour:
     type: 3}
   rango: 50
   fireRate: 1
-  fireCD: 0
+  fireCD: 2.5
