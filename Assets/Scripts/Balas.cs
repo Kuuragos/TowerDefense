@@ -6,6 +6,7 @@ public class Balas : MonoBehaviour
 {
     private Transform target;
     public float speed = 70f;
+    public int daño = 5;
 
     public void Skeek(Transform targetB)
     {
@@ -29,11 +30,20 @@ public class Balas : MonoBehaviour
             return;
         }
         transform.Translate(magni.normalized * disThisFrame, Space.World);
+        transform.LookAt(target);
     }
 
     void GolpeTarget()
     {
-        Destroy(gameObject);
+        Daño(target);
         Destroy(target.gameObject);
+    }
+    private void Daño(Transform enemigo)
+    {
+        MovimientoEnemigo movEne = enemigo.GetComponent<MovimientoEnemigo>();
+        if (movEne != null)
+        {
+            movEne.RecibirDaño(daño);
+        }
     }
 }
