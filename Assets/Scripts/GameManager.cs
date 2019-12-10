@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
    void Update()
     {
         if (gameEnded) return;
-        if (Vida.vidas <= 0)
+        if (Dinero.vidas <= 0)
         {
             EndGame();
         }  
