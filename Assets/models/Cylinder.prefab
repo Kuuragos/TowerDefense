@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3550414970615759035}
   - component: {fileID: 3550414970615758982}
   - component: {fileID: 3550414970615758981}
-  - component: {fileID: 3550414970615758980}
   - component: {fileID: 3550414970615758983}
   - component: {fileID: 4191906755684968186}
+  - component: {fileID: 213489705172406078}
   m_Layer: 9
   m_Name: Cylinder
   m_TagString: baseTorre
@@ -80,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &3550414970615758980
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3550414970615759034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &3550414970615758983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +112,17 @@ MonoBehaviour:
   hoverColor: {r: 0, g: 0.8396226, b: 0.67190224, a: 0}
   sinDineroColor: {r: 1, g: 0.15851644, b: 0, a: 0}
   posicionActual: {x: 0, y: 0, z: 0}
+--- !u!136 &213489705172406078
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3550414970615759034}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.00000005960464, y: 0, z: -0.00000008940697}
