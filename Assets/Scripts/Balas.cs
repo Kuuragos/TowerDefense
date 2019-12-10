@@ -36,7 +36,7 @@ public class Balas : MonoBehaviour
     void GolpeTarget()
     {
         Daño(target);
-        Destroy(target.gameObject);
+        Destroy(gameObject);
     }
     private void Daño(Transform enemigo)
     {

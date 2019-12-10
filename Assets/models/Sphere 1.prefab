@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2113054608125189995}
   - component: {fileID: 6330091527349057864}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Sphere 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 70
-  "da\xF1o": 25
+  "da\xF1o": 50
 --- !u!54 &6330091527349057864
 Rigidbody:
   m_ObjectHideFlags: 0

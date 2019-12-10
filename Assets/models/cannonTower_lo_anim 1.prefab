@@ -149,7 +149,7 @@ MonoBehaviour:
     type: 3}
   rango: 50
   fireRate: 1
-  fireCD: 3.5
+  fireCD: 1.5
 --- !u!1 &371907041832432990
 GameObject:
   m_ObjectHideFlags: 0
