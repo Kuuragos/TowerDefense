@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 333412028822635553}
   - component: {fileID: 8143450647399980116}
   - component: {fileID: 7984466224050843589}
-  - component: {fileID: 4970277804891044400}
+  - component: {fileID: 1490103425668334982}
   m_Layer: 0
   m_Name: NecromancerV3
   m_TagString: Enemy
@@ -745,8 +745,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &4970277804891044400
-CapsuleCollider:
+--- !u!65 &1490103425668334982
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -755,10 +755,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1
-  m_Height: 3
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.5, z: 1}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &4819613649997629866
 GameObject:
   m_ObjectHideFlags: 0
