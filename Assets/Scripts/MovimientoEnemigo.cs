@@ -67,7 +67,6 @@ public class MovimientoEnemigo : MonoBehaviour
 
     private void EndPath()
     {
-        Vida.vidas--;
         Destroy(gameObject);
     }
 
