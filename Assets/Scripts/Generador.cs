@@ -31,20 +31,24 @@ public class Generador : MonoBehaviour
     }
     void SpawnEnemigo()
     {
-        int nE = Random.Range(0, 3);
-        GameObject enemigo;
-        switch (nE)
+        if (GameManager.gameEnded == false)
         {
-            case 0:
-                enemigo = Instantiate(necromancer, transform.position, Quaternion.identity);
-                break;
-            case 1:
-                enemigo = Instantiate(skeleton, transform.position, Quaternion.identity);
-                break;
-            case 2:
-                enemigo = Instantiate(boo, transform.position, Quaternion.identity);
-                break;
+            int nE = Random.Range(0, 3);
+            GameObject enemigo;
+            switch (nE)
+            {
+                case 0:
+                    enemigo = Instantiate(necromancer, transform.position, Quaternion.identity);
+                    break;
+                case 1:
+                    enemigo = Instantiate(skeleton, transform.position, Quaternion.identity);
+                    break;
+                case 2:
+                    enemigo = Instantiate(boo, transform.position, Quaternion.identity);
+                    break;
+            }
         }
+        
     }
     void LlamarOleadas()
     {
