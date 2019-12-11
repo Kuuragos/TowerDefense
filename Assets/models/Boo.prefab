@@ -99,9 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 7935395899418097978}
   camara: {fileID: 0}
-  saludInicial: 200
+  saludInicial: 400
   salud: 0
-  lootDinero: 100
+  lootDinero: 300
   barraSalud: {fileID: 2416853201270580563}
 --- !u!195 &7935395899418097978
 NavMeshAgent:
