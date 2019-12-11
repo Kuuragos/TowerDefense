@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private bool gameEnded = false;
+    public static bool gameEnded = false;
+    public GameObject gameOverIA;
 
-   void Update()
+    void Start()
+    {
+        gameEnded = false; 
+    }
+
+    void Update()
     {
         if (gameEnded) return;
+
+        if (Input.GetKeyDown("y"))
+            EndGame();
+
         if (Dinero.vidas <= 0)
         {
             EndGame();
@@ -17,6 +27,7 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         gameEnded = true;
+        gameOverIA.SetActive(true);
         Debug.Log("Fin del Juego: ERES UN MANCO");
     }
 }
