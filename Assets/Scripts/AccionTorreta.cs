@@ -6,6 +6,7 @@ public class AccionTorreta : MonoBehaviour
 {
     public Transform target, dirBalas;
     public GameObject prefabBala;
+    public AudioSource disparo;
     public float rango = 10f;
     public float fireRate = 1f;
     public float fireCD;
@@ -59,11 +60,15 @@ public class AccionTorreta : MonoBehaviour
     }
     void Shoot()
     {
-        GameObject dirBala = (GameObject) Instantiate(prefabBala, dirBalas.position, dirBalas.rotation);
-        Balas bullet = dirBala.GetComponent<Balas>();
-        if (bullet != null)
+        if(GameManager.gameEnded ==false)
         {
-            bullet.Skeek(target);
+            GameObject dirBala = (GameObject) Instantiate(prefabBala, dirBalas.position, dirBalas.rotation);
+            Balas bullet = dirBala.GetComponent<Balas>();
+            if (bullet != null)
+            {
+                disparo.Play();
+                bullet.Skeek(target);
+            }
         }
     }
     private void FixedUpdate()

@@ -7,9 +7,17 @@ public class GameManager : MonoBehaviour
     public static bool gameEnded = false;
     public GameObject gameOverIA;
 
+    public static AudioSource musica;
+    public  AudioSource sonido;
+    public  AudioSource tasdingo;
+
     void Start()
     {
+        musica=GetComponent<AudioSource>();
+        tasdingo=GetComponent<AudioSource>();
+
         gameEnded = false; 
+        musica=sonido;
     }
 
     void Update()
@@ -27,7 +35,10 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         gameEnded = true;
+        musica.Stop();
         gameOverIA.SetActive(true);
         Debug.Log("Fin del Juego: ERES UN MANCO");
+        tasdingo.Play();
+
     }
 }
